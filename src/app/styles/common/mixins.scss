@@ -1,0 +1,33 @@
+@mixin flex-row($align: stretch, $justify: flex-start, $wrap: nowrap) {
+    display: flex;
+    flex-direction: row;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+  
+@mixin flex-column($align: stretch, $justify: flex-start, $wrap: nowrap) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+}
+  
+@mixin centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+@mixin container($padding: $padding-medium) {
+    padding: $padding;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+@mixin text-style($size: $font-size-md, $color: $text-color, $weight: normal) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
