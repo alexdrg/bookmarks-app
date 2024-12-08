@@ -1,0 +1,7 @@
+{
+    "bookmarks": [
+      { "id": 1, "title": "Angular Docs", "url": "https://angular.io" },
+      { "id": 2, "title": "NGRX Docs", "url": "https://ngrx.io" },
+      { "id": 3, "title": "RxJs - A reactive programming library for JavaScript", "url": "https://rxjs.dev" }
+    ]
+  }
