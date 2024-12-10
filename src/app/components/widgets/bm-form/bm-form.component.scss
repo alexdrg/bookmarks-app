@@ -1,0 +1,8 @@
+@import '../../../styles/index.scss';
+
+.bm-form-fields-wrapper {
+    @include full-width();
+    @include flex-row(flex-start, flex-start);
+    
+    gap: 6px;
+}

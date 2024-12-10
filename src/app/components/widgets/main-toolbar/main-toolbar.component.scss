@@ -1,0 +1,38 @@
+@import '../../../styles/index.scss';
+
+.bookmarks-toolbar {
+    @include container(0);
+    @include flex-column(flex-start, stretch);
+    @include full-width();
+    font-family: $font-family-base;
+
+    .bookmarks-toolbar-row {
+        @include flex-row(center, space-between);
+        @include container($padding-small);
+        @include full-width();
+        color: $text-color;
+
+        &.bookmarks-toolbar-main-row {
+            @include border-bottom();
+            height: 60px;
+            background-color: $primary-color;
+            color: $white-color;
+
+            .bookmarks-toolbar-title {
+                font-size: $font-size-lg;
+            }
+
+            .bookmarks-toolbar-add-icon {
+                @include centered();
+                color: $white-color;
+                width: 24px;
+                height: 24px;
+            }
+
+            .bookmarks-toolbar-main-row-content {
+                @include flex-row();
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+@import '../../../styles/index.scss';
+
+.bm-no-data-container {
+    @include centered();
+    @include flex-column(stretch, center);
+    @include container($padding-large);
+    @include text-style();
+    @include full-width();
+    @include full-border($primary-color, 2px);
+    border-radius: 4px;
+
+    min-height: 150px;
+    min-width: 35vw;
+
+    .bm-no-results-main {
+        @include flex-row(center, center);
+        @include full-width();
+        color: $primary-color;
+        font-size: $font-size-lg;
+        font-weight: 600;
+        gap: 8px;
+    }
+
+    .bm-no-results-second {
+        @include flex-row(center, center);
+        @include full-width();
+        color: $primary-color;
+        font-size: $font-size-sm;
+        font-weight: 400;
+    } 
+}

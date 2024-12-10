@@ -1,0 +1,10 @@
+@import '../../../../styles/index.scss';
+
+.bm-list-categoty-item {
+    @include text-style($font-size-md, $dark-grey-color, 600);
+    @include container($padding-small);
+
+    span {
+        text-transform: capitalize;
+    }
+}

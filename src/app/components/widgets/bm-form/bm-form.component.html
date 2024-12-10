@@ -1,0 +1,40 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit($event)">
+    <div class="bm-form-fields-wrapper">
+        <ng-container *ngFor="let field of config">
+            <div [formGroupName]="field.name" *ngIf="field.type === 'group'">
+                <ng-container *ngFor="let child of field.children">
+                    <div>
+                        <label [for]="child.name">{{ child.label }}</label>
+                        <input
+                            *ngIf="child.type === 'text'"
+                            [formControlName]="child.name"
+                            [type]="child.type"
+                            [placeholder]="child.placeholder"
+                            [attr.id]="child.name"
+                        />
+                        <div *ngIf="form.get([field.name, child.name])?.invalid && form.get([field.name, child.name])?.touched">
+                            {{ child.errorMessage }}
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+            <div *ngIf="field.type !== 'group'">
+                <mat-form-field class="full-width" appearance="fill">
+                    <mat-label>{{ field.label }}</mat-label>
+                    <input
+                      matInput
+                      *ngIf="field.type === 'text'"
+                      [formControlName]="field.name"
+                      [type]="field.type"
+                      [placeholder]="field?.placeholder ?? ''"
+                    />
+                    <mat-error *ngIf="form.get(field.name)?.invalid && form.get(field.name)?.touched">
+                      {{ field.errorMessage }}
+                    </mat-error>
+                </mat-form-field>
+            </div>
+        </ng-container>
+    </div>
+    <app-bm-button text="Submit" type="primary" [disabled]="form.invalid"></app-bm-button>
+  </form>
+  

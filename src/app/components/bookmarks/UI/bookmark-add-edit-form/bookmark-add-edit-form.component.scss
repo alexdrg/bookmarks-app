@@ -1,0 +1,41 @@
+@import '../../../../styles/index.scss';
+
+:host {
+    @include full-width();
+    @include centered();
+    
+    .bm-add-edit-form-container {
+        @include full-border($primary-color, 0.9px);
+        @include full-width();
+        @include text-style();
+    
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        max-width: 600px;
+    
+        .bm-add-edit-content-form-wrapper {}
+    
+        .bm-card-container {
+            border: 0;
+        }
+
+        mat-card {
+            border: 0;
+        }
+    }
+
+    .mat-mdc-card-header {
+        @include full-width();
+
+        .bm-card-info-section {
+            flex: 1;
+        }
+    }
+
+    .bm-add-edit-content-form-wrapper {
+        .bm-form-fields-wrapper {
+            div:last-child {
+                flex: 1;
+            }
+        }
+    }
+}

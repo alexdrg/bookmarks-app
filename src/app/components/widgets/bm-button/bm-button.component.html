@@ -1,0 +1,12 @@
+<button
+    mat-button
+    matRipple
+    [disabled]="disabled"
+    [matRippleDisabled]="disabled"
+    class="bookmarks-button"
+    [class.bm-primary-btn]="isPrimaryTypeBtn(type)"
+>
+    <ng-content select="[icon]"></ng-content>
+    <span *ngIf="text">{{ text }}</span>
+    <ng-content></ng-content>
+</button>

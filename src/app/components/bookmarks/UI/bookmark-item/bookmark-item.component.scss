@@ -1,0 +1,10 @@
+@import '../../../../styles/index.scss';
+
+:host {
+    @include full-width();
+}
+
+.bm-card-info-section {
+    @include flex-column(flex-start, flex-start);
+    flex: 1;
+}

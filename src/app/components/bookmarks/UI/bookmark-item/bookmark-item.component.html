@@ -1,0 +1,23 @@
+<app-bm-card>
+    <ng-container mat-card-header>
+        <section class="bm-card-icon">
+            <mat-icon>bookmark</mat-icon>
+        </section>
+        <section class="bm-card-info-section">
+            <mat-card-title>{{ item?.title }}</mat-card-title>
+            <mat-card-subtitle>
+                <a [href]="item?.url" target="_blank">{{ item?.url }}</a>
+            </mat-card-subtitle>
+        </section>
+        <section class="bm-card-action-section">
+            <app-bm-button class="bm-card-edit-btn">
+                <mat-icon
+                    icon
+                    class="bm-card-edit-icon"
+                >
+                    edit
+                </mat-icon>
+            </app-bm-button>
+        </section>
+    </ng-container>
+</app-bm-card>

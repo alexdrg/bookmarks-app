@@ -1,0 +1,39 @@
+@import '../../../styles/index.scss';
+
+.bm-card-container {
+    font-family: $font-family-base;
+    padding: $padding-medium;
+
+    .mat-mdc-card-header {
+        gap: 8px;
+        padding: 0;
+        align-items: center;
+    
+        .bm-card-icon {
+            @include centered();
+    
+            mat-icon {
+                font-size: 2rem;
+                width: 2rem;
+                height: 2rem;
+                color: $dark-grey-color;
+            }
+        }
+    
+        .bm-card-action-section {
+            @include centered();
+    
+            .bm-card-edit-btn .bookmarks-button {
+                border: none !important;
+            }
+    
+            .bm-card-edit-btn mat-icon {
+                color: $dark-grey-color;
+            }
+    
+            .bm-card-edit-btn:hover mat-icon {
+                color: $primary-color !important;
+            }
+        }
+    }
+}

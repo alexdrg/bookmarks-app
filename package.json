@@ -2,8 +2,10 @@
   "name": "bookmarks-app",
   "version": "0.0.0",
   "scripts": {
+    "start:client": "ng serve --open",
+    "start:server": "json-server --watch db.json --port 8080",
+    "start": "npm run start:server & npm run start:client",
     "ng": "ng",
-    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -23,6 +25,7 @@
     "@ngrx/effects": "^15.4.0",
     "@ngrx/entity": "^15.4.0",
     "@ngrx/router-store": "^15.4.0",
+    "@ngrx/schematics": "^15.4.0",
     "@ngrx/store": "^15.4.0",
     "@ngrx/store-devtools": "^15.4.0",
     "json-server": "^1.0.0-beta.3",

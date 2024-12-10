@@ -1,0 +1,20 @@
+<div class="bm-loading-container">
+	<mat-progress-spinner
+		*ngIf="diameter"
+		[diameter]="diameter"
+		[mode]="mode"
+        color="primary"
+        aria-hidden="false"
+		class="bm-loading"
+	></mat-progress-spinner>
+	<mat-progress-spinner 
+        *ngIf="!diameter"
+        [mode]="mode"
+        color="primary"
+        aria-hidden="false"
+        class="bm-loading"
+    ></mat-progress-spinner>
+    <span>
+        Loading..
+    </span>
+</div>

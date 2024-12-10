@@ -1,0 +1,7 @@
+@import './styles//index.scss';
+
+.app-main-page-container {
+    @include flex-column(flex-start, stretch);
+    @include full-width();
+    padding: $padding-medium;
+}

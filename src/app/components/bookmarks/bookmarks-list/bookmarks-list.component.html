@@ -1,0 +1,20 @@
+<div class="bm-list-page-content">
+    <app-bm-component-template
+        [ngif]="listDataItems$ | async"
+        [ngifResults]="(listDataItems$ | async)?.length"
+        [loading]="(listDataLoading$ | async) ?? false"
+    >
+        <div class="bm-list-wrapper">
+            <ng-container *ngFor="let item of (listDataItems$ | async) ?? [] | groupByDate | flattenGroupedItems">
+                <ng-container *ngIf="item?.id === 'category-type'">
+                    <app-bookmarks-list-category-item [item]="item"></app-bookmarks-list-category-item>
+                </ng-container>
+                
+                <ng-container *ngIf="item?.id !== 'category-type'">
+                    <app-bookmark-item [item]="item"></app-bookmark-item>
+                </ng-container>
+            
+            </ng-container>
+        </div>
+    </app-bm-component-template>
+</div>

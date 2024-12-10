@@ -1,0 +1,22 @@
+<div class="bm-add-edit-form-container">
+    <app-bm-card>
+        <mat-card-header>
+            <section class="bm-card-info-section">
+                <mat-card-title *ngIf="_initialValues">Edit bookmark</mat-card-title>
+                <mat-card-title *ngIf="!_initialValues">Create new bookmark</mat-card-title>
+            </section>
+            <section class="bm-card-icon">
+                <mat-icon>bookmark_border</mat-icon>
+            </section>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="bm-add-edit-content-form-wrapper">
+                <app-bm-form
+                    [config]="formConfig"
+                    [initialValues]="_initialValues"
+                    (formSubmit)="handleFormSubmit($event)"
+                ></app-bm-form>
+            </div>
+        </mat-card-content>
+    </app-bm-card>
+</div>

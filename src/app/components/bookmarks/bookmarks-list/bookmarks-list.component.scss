@@ -1,0 +1,21 @@
+@import '../../../styles/index.scss';
+
+:host {
+    @include full-width();
+
+    .bm-list-page-content {
+        @include full-width();
+        @include flex-column(center, flex-start);
+        @include container($padding-medium);
+    
+        gap: 8px;
+        min-height: 100%;
+
+        .bm-list-wrapper {
+            @include full-width();
+            @include flex-column(flex-start, center);
+
+            gap: 8px;
+        }
+    }
+}

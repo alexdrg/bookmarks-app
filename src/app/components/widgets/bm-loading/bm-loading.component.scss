@@ -1,0 +1,10 @@
+@import '../../../styles/index.scss';
+
+.bm-loading-container {
+    @include centered();
+    @include container($padding-small);
+    @include text-style();
+
+    background-color: rgba(0, 0, 0, 0.115);
+    backdrop-filter: blur(4px);
+}

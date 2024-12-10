@@ -1,0 +1,17 @@
+<app-bm-loading 
+    *ngIf="loading; else loaded"
+    [diameter]="80"
+></app-bm-loading>
+<ng-template #loaded>
+    <ng-container *ngIf="ngif && ngifResults; else errorsTemplate">
+        <ng-content></ng-content>
+    </ng-container>
+    
+    <ng-template #errorsTemplate>
+        <app-bm-no-results
+            *ngIf="!ngifResults"
+        ></app-bm-no-results>
+    </ng-template>
+</ng-template>
+
+

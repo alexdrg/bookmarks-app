@@ -1,1 +1,22 @@
-<p>main-toolbar works!</p>
+<mat-toolbar class="bookmarks-toolbar">
+    <mat-toolbar-row 
+        class="bookmarks-toolbar-row bookmarks-toolbar-main-row"
+    >
+
+        <span class="bookmarks-toolbar-title">Bookmarks</span>
+
+        <section class="bookmarks-toolbar-main-row-content">
+            <ng-container #customComponentContainer></ng-container>
+        </section>
+        
+        <app-bm-button (click)="onAddButtonClick($event)">
+            <mat-icon
+                icon
+                class="bookmarks-toolbar-add-icon"
+            >
+                add
+            </mat-icon>
+        </app-bm-button>
+
+    </mat-toolbar-row>
+</mat-toolbar>

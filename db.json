@@ -1,7 +1,7 @@
 {
     "bookmarks": [
-      { "id": 1, "title": "Angular Docs", "url": "https://angular.io" },
-      { "id": 2, "title": "NGRX Docs", "url": "https://ngrx.io" },
-      { "id": 3, "title": "RxJs - A reactive programming library for JavaScript", "url": "https://rxjs.dev" }
+      { "id": 1, "title": "Angular Docs", "url": "https://angular.io", "createDate": "09.12.2024" },
+      { "id": 2, "title": "NGRX Docs", "url": "https://ngrx.io", "createDate": "09.12.2024"},
+      { "id": 3, "title": "RxJs - A reactive programming library for JavaScript", "url": "https://rxjs.dev", "createDate": "03.12.2024" }
     ]
   }

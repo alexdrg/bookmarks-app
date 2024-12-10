@@ -23,11 +23,39 @@
 @mixin container($padding: $padding-medium) {
     padding: $padding;
     margin: 0 auto;
-    max-width: 1200px;
+    //max-width: 1200px;
 }
 
 @mixin text-style($size: $font-size-md, $color: $text-color, $weight: normal) {
     font-size: $size;
     color: $color;
     font-weight: $weight;
+}
+
+@mixin full-width() {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@mixin border-bottom($color: $border-color-default, $width: $border-width-default, $border-type: solid) {
+    border-bottom: $width $border-type $color;
+}
+
+@mixin border-top($color: $border-color-default, $width: $border-width-default, $border-type: solid) {
+    border-top: $width $border-type $color;
+}
+
+@mixin border-left($color: $border-color-default, $width: $border-width-default, $border-type: solid) {
+    border-left: $width $border-type $color;
+}
+
+@mixin border-right($color: $border-color-default, $width: $border-width-default, $border-type: solid) {
+    border-right: $width $border-type $color;
+}
+
+@mixin full-border($color: $border-color-default, $width: $border-width-default, $border-type: solid) {
+    @include border-top($color, $width, $border-type);
+    @include border-bottom($color, $width, $border-type);
+    @include border-left($color, $width, $border-type);
+    @include border-right($color, $width, $border-type);
 }

@@ -1,13 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-//import { MaterialModule } from '../../modules/material.module';
 import { MainToolbarComponent } from './main-toolbar/main-toolbar.component';
-//import { CommonTemprModule } from '../../modules/common-tempr.module';
 import { RouterModule } from '@angular/router';
-//import { PipesModule } from '../../modules/pipes.module';
+import { MaterialModule } from 'src/app/modules/material.module';
+import { BmButtonComponent } from './bm-button/bm-button.component';
+import { BmLoadingComponent } from './bm-loading/bm-loading.component';
+import { BmComponentTemplateComponent } from './bm-component-template/bm-component-template.component';
+import { BmNoResultsComponent } from './bm-no-results/bm-no-results.component';
+import { BmFormComponent } from './bm-form/bm-form.component';
+import { BmCardComponent } from './bm-card/bm-card.component';
 
 const COMPONENTS_ARRAY = [
-	MainToolbarComponent
+    BmButtonComponent,
+	MainToolbarComponent,
+    BmLoadingComponent,
+    BmComponentTemplateComponent,
+    BmNoResultsComponent,
+    BmFormComponent,
+    BmCardComponent,
 ];
 
 @NgModule({
@@ -15,6 +25,7 @@ const COMPONENTS_ARRAY = [
 	imports: [
 		CommonModule,
 		RouterModule.forChild([]),
+        MaterialModule,
 	],
 	exports: COMPONENTS_ARRAY,
 })

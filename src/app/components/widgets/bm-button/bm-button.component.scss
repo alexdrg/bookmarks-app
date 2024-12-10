@@ -1,0 +1,34 @@
+@import '../../../styles/index.scss';
+
+.bookmarks-button {
+    @include flex-row(center, flex-start);
+    @include full-border($border-color-default, 2px);
+    padding: $padding-small $padding-medium;
+    font-size: $font-size-md;
+    border-radius: $border-radius-md;
+    cursor: pointer;
+    background-color: transparent;
+    color: $text-color;
+    transition: background-color 0.3s;
+    gap: 6px;
+
+    &.bm-primary-btn {
+        border-color: $primary-color;
+        color: $primary-color;
+    }
+
+    &.bm-primary-btn:hover:not(:disabled) {
+        background-color: $primary-color;
+        color: $white-color;
+    }
+
+  &:disabled {
+    background-color: $grey-color;
+    border-color: $grey-color;
+    cursor: not-allowed;
+  }
+
+  .bookmarks-button [icon] {
+    margin-right: var(--spacing-sm);
+  }
+}
